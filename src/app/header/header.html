@@ -1,7 +1,7 @@
 @if(this.router.url != '/'){
     <header id="header">
         <nav [class.open]="menuOpen">
-            <img [src]="isLight ? '/images/menu.png' : '/images/menu_light.png'" class="menu-toggle" (click)="toggleMenu()">
+            <img [src]="isLight ? './images/menu.png' : './images/menu_light.png'" class="menu-toggle" (click)="toggleMenu()">
 
             <a (click)="scrollToTop()">Accueil</a>
             <a (click)="scrollTo('competences')">Compétences</a>
