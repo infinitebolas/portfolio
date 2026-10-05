@@ -1,0 +1,12 @@
+<h2 class="subtitle">Me contacter</h2>
+<div class="contact-text">
+    <p>Vous souhaitez me contacter pour une question, un renseignement, un projet ou une opportunité professionnelle ?
+    Envoyez moi un message !</p>
+</div>
+<form #f="ngForm" class="formulaire">
+    <input type="text" placeholder="Nom" name="nom" [(ngModel)]="form.nom" required/>
+    <input type="email" placeholder="Email" name="email" [(ngModel)]="form.email" required/>
+    <textarea placeholder="Message" name="message" [(ngModel)]="form.message" required></textarea>
+    <button (click)="envoyer()" [disabled]="f.invalid">Envoyer</button>
+    <p id="remerciement">Merci pour votre message !</p>
+</form>

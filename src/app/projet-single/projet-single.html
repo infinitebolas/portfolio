@@ -1,0 +1,22 @@
+<div class="projet">
+    <h2>{{projet.title | uppercase}}</h2>
+    <a (click)="goBack()">retour</a>
+    <div class="langages">
+        @for(langage of projet.langages; track langage){
+            <img [src]="langage">
+    }
+    </div>
+    @if (projet.id === "5") {
+    <p [innerHTML]="projet.description" class="description"></p>
+  } @else {
+    <p class="description">{{ projet.description }}</p>
+  }
+    <div class="images">
+        @for(image of projet.images[0]; track $index; let i = $index){
+            <div class="detail">
+                <img class="image" [src]="image">
+                {{projet.images[1][i]}}
+            </div>
+        }
+    </div>
+</div>    

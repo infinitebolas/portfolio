@@ -1,0 +1,14 @@
+.projets{
+    display:flex;
+    flex-wrap:wrap;
+    gap:5em;
+    align-items: center;
+    justify-content: center;
+}
+
+@media(max-width:768px){
+    .projets{
+        flex-direction:column;
+        gap:1em;
+    }
+}

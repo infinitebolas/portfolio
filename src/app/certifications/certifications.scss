@@ -1,0 +1,23 @@
+.certifications{
+    display:flex;
+    flex-wrap: wrap;
+    gap:10em;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.certif{
+    width:40em;
+    height:30em;
+}
+
+@media (max-width:767px){
+    .certif{
+        width:20em;
+        height:10em;
+    }
+    .certifications{
+        gap:3em;
+    }
+}

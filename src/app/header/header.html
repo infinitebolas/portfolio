@@ -1,0 +1,21 @@
+@if(this.router.url != '/'){
+    <header id="header">
+        <nav [class.open]="menuOpen">
+            <img [src]="isLight ? '/images/menu.png' : '/images/menu_light.png'" class="menu-toggle" (click)="toggleMenu()">
+
+            <a (click)="scrollToTop()">Accueil</a>
+            <a (click)="scrollTo('competences')">Compétences</a>
+            <a (click)="scrollTo('projets')">Projets</a>
+            <a (click)="scrollTo('certifications')">Certifications</a>
+            <a (click)="scrollTo('contact')">Contact</a>
+
+            <div class="darkmode" (click)="switchLight()">
+                @if (isLight == true) {
+                    <p class="lightdark">🌙</p>
+                } @else {
+                    <p class="lightdark">☀️</p>
+                }
+            </div>
+        </nav>
+    </header>
+}

@@ -1,0 +1,6 @@
+<h2 class="subtitle">Mes projets</h2>
+<div class="projets">
+    @for (projet of projets; track projet.title) {
+        <app-projet [projetAlone]="projet"/>
+    }
+</div>

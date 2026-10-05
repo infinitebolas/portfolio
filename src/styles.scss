@@ -1,1 +1,78 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html,
+body {
+    scroll-behavior: smooth;
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+    font-family:'Lora';
+}
+body{    
+    padding-top:60px;
+    flex-direction: column;
+    background-color: white;
+        color:#150b55;
+        a{
+            color:#150b55;;
+        }
+    &.light{
+        background-color:#090427;
+        color:white;
+        a{
+            color: white;
+        } 
+        .apropos{
+            border:1px white solid;
+        }  
+        .view, .projet{
+            color:#150b55;
+        }  
+    }
+
+}
+
+a{
+  margin: 0 10px;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  cursor:pointer;
+}
+
+.active{
+    color: #5fadec;
+    text-decoration: underline;
+}
+
+.subtitle{
+    font-size: 40px;
+    text-align: center;
+    margin-top:3.5em;
+    margin-bottom:2.5em;
+}
+
+.viewProject{
+    cursor:pointer
+}
+
+body.no-scroll, html.no-scroll {
+    overflow-y: hidden !important;
+    overscroll-behavior: none;
+    scrollbar-width: none; 
+    &::-webkit-scrollbar {
+        display: none; 
+    }
+}
+
+@media(max-width:768px){
+    .subtitle{
+        margin-top:1.5em;
+        margin-bottom:2em;
+    }
+}

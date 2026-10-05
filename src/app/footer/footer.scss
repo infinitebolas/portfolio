@@ -1,0 +1,18 @@
+.reseaux{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:50px;
+    height:100px;
+}
+
+.github, .linkedin{
+    width:35px;
+    height:35px;
+    cursor:pointer;
+}
+
+.mail{
+    text-align:center;
+    height:50px;
+}

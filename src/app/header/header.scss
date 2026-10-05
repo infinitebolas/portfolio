@@ -1,0 +1,112 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+  z-index: 1000; 
+  background-color: white;
+  color: #150b55;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
+
+  a {
+    color: #150b55;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+
+  &.light {
+    background-color: #090427;
+    color: white;
+    a {
+      color: white;
+    }
+    nav {
+      background-color: #090427; 
+    }
+  }
+}
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+}
+
+.lightdark {
+  cursor: pointer;
+  margin: 0;
+}
+
+.darkmode {
+  position: absolute;
+  right: 3em;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: inherit;
+  z-index: 1001;
+}
+
+
+@media (max-width: 768px) {
+
+  header {
+    position:fixed;
+    justify-content: space-between;
+    padding: 0 20px;
+    height:60px;
+  }
+
+  .menu-toggle {
+    position:fixed;
+    top:10px;
+    left:10vw;
+    display: block; 
+    width:40px;
+    height:40px;
+  }
+
+  .darkmode {
+    position: static; 
+    text-align: center;
+
+  }
+
+  nav {
+    position: fixed;
+    height:100%;
+    top: 60px; 
+    left: -100%; 
+    background-color: white;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 3rem;
+    gap: 2rem;
+    transition: left 0.3s ease-in-out;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+
+    &.open {
+      left: 0;
+    }
+
+    a {
+      font-size: 1.2rem;
+    }
+  }
+}
