@@ -56,7 +56,7 @@ export class Accueil implements AfterViewInit{
       // Navigation vers une section OU retour vers le haut
       if (
         event.url.includes('#') ||
-        event.url === '/accueil'
+        event.url === '/NevenRouinsard'
       ) {
         this.isProgrammaticScroll = true;
       }
